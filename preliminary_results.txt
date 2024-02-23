@@ -29,3 +29,36 @@ Tasks:
 - create MAPE table
 - train & test errors (r^2, MAPE)
 - 3-rd level of cascade: Ridge regression at the end
+
+
+dataset2 r^2 test                    | y1      | y2      | y3      |
+--------------------------------------------------------------------
+GBR:                                 | 0.86268 | ?       | ?       |
+optimized GBR:                       | 0.86927 | ?       | ?       |
+clusterization + opt GBR:            | 0.87473 | ?       | ?       |
+clusterization-y1 + opt GBR:         | 0.87915 | ?       | ?       |
+clusterization-y1 + opt GBR + Ridge: | 0.88080 | ?       | ?       |
+
+dataset2 MAPE test                   | y1      | y2      | y3      |
+--------------------------------------------------------------------
+GBR:                                 | 0.06906 | ?       | ?       |
+optimized GBR:                       | 0.06749 | ?       | ?       |
+clusterization + opt GBR:            | 0.06659 | ?       | ?       |
+clusterization-y1 + opt GBR:         | 0.06707 | ?       | ?       |
+clusterization-y1 + opt GBR + Ridge: | 0.06707 | ?       | ?       |
+
+dataset2 r^2 train                   | y1      | y2      | y3      |
+--------------------------------------------------------------------
+GBR:                                 | 0.93153 | ?       | ?       |
+optimized GBR:                       | 0.93664 | ?       | ?       |
+clusterization + opt GBR:            | 0.97969 | ?       | ?       |
+clusterization-y1 + opt GBR:         | 0.96645 | ?       | ?       |
+clusterization-y1 + opt GBR + Ridge: | 0.96073 | ?       | ?       |
+
+dataset2 MAPE train                  | y1      | y2      | y3      |
+--------------------------------------------------------------------
+GBR:                                 | 0.05116 | ?       | ?       |
+optimized GBR:                       | 0.04911 | ?       | ?       |
+clusterization + opt GBR:            | 0.03029 | ?       | ?       |
+clusterization-y1 + opt GBR:         | 0.03752 | ?       | ?       |
+clusterization-y1 + opt GBR + Ridge: | 0.04016 | ?       | ?       |
