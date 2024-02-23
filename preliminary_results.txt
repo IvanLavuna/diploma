@@ -6,7 +6,8 @@ bare GRNN:                 | 0.79695 | 0.70    | 0.54    |
 clusterization + GRNN:     | 0.80161 | 0.70    | ?       |
 polynomial + GRNN:         | 0.78603 | 0.69884 | 0.52089 |
 dependent y1,y2,y3 + GRNN: | 0.78    | 0.70    | 0.52    |
-
+clusterization_y1 + GRNN:  | 0.79842 | ?       | ?       |
+clusterization_y1 + GBR:   | 0.886   | ?       | ?       |
 
 dataset2 r^2 test          | y1      | y2      | y3      |
 ----------------------------------------------------------
@@ -15,3 +16,16 @@ bare GRNN:                 | ?       | ?       | ?       |
 clusterization + GRNN:     | ?       | ?       | ?       |
 polynomial + GRNN:         | ?       | ?       | ?       |
 dependent y1,y2,y3 + GRNN: | ?       | ?       | ?       |
+
+Tasks:
+    - clustering + y1 as a feature
+    - Gradient boosting instead of GRNN
+Assuming (y1, y2, y3) are independent
+-----------------------------------------------
+: Linear regression at the end (Reach regression)
+
+Tasks:
+- clusterization with y1 and without + GBR
+- create MAPE table
+- train & test errors (r^2, MAPE)
+- 3-rd level of cascade: Ridge regression at the end
