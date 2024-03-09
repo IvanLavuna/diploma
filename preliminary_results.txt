@@ -31,34 +31,59 @@ Tasks:
 - 3-rd level of cascade: Ridge regression at the end
 
 
-dataset2 r^2 test                    | y1      | y2      | y3      |
---------------------------------------------------------------------
-GBR:                                 | 0.86268 | 0.84084 | 0.68967 |
-optimized GBR:                       | 0.86927 | 0.85282 | 0.71280 |
-clusterization + opt GBR:            | 0.87473 | 0.85925 | 0.71670 |
-clusterization-y1 + opt GBR:         | 0.87915 | 0.86176 | 0.71451 |
-clusterization-y1 + opt GBR + Ridge: | 0.88080 | 0.86184 | 0.71530 |
+dataset2 r^2 test                                | y1      | y2      | y3      |
+--------------------------------------------------------------------------------
+GBR:                                             | 0.86268 | 0.84084 | 0.68967 |
+optimized GBR:                                   | 0.86927 | 0.85282 | 0.71280 |
+clusterization + opt GBR:                        | 0.87473 | 0.85925 | 0.71670 |
+clusterization-y1 + opt GBR:                     | 0.87915 | 0.86176 | 0.71451 |
+clusterization-y1 + opt GBR + Ridge:             | 0.88080 | 0.86184 | 0.71530 |
 
-dataset2 MAPE test                   | y1      | y2      | y3      |
---------------------------------------------------------------------
-GBR:                                 | 0.06906 | 0.51577 | 0.15017 |
-optimized GBR:                       | 0.06749 | 0.07776 | 0.16802 |
-clusterization + opt GBR:            | 0.06659 | 0.53319 | 0.16990 |
-clusterization-y1 + opt GBR:         | 0.06707 | 0.52015 | 0.16719 |
-clusterization-y1 + opt GBR + Ridge: | 0.06707 | 0.52465 | 0.16765 |
+dataset2 MAPE test                               | y1      | y2      | y3      |
+--------------------------------------------------------------------------------
+GBR:                                             | 0.06906 | 0.51577 | 0.15017 |
+optimized GBR:                                   | 0.06749 | 0.07776 | 0.16802 |
+clusterization + opt GBR:                        | 0.06659 | 0.53319 | 0.16990 |
+clusterization-y1 + opt GBR:                     | 0.06707 | 0.52015 | 0.16719 |
+clusterization-y1 + opt GBR + Ridge:             | 0.06707 | 0.52465 | 0.16765 |
 
-dataset2 r^2 train                   | y1      | y2      | y3      |
---------------------------------------------------------------------
-GBR:                                 | 0.93153 | 0.95662 | 0.89925 |
-optimized GBR:                       | 0.93664 | 0.99506 | 0.90969 |
-clusterization + opt GBR:            | 0.97969 | 0.99985 | 0.88734 |
-clusterization-y1 + opt GBR:         | 0.96645 | 0.99920 | 0.90828 |
-clusterization-y1 + opt GBR + Ridge: | 0.96073 | 0.99923 | 0.90927 |
+dataset2 r^2 train                               | y1      | y2      | y3      |
+--------------------------------------------------------------------------------
+GBR:                                             | 0.93153 | 0.95662 | 0.89925 |
+optimized GBR:                                   | 0.93664 | 0.99506 | 0.90969 |
+clusterization + opt GBR:                        | 0.97969 | 0.99985 | 0.88734 |
+clusterization-y1 + opt GBR:                     | 0.96645 | 0.99920 | 0.90828 |
+clusterization-y1 + opt GBR + Ridge:             | 0.96073 | 0.99923 | 0.90927 |
 
-dataset2 MAPE train                  | y1      | y2      | y3      |
---------------------------------------------------------------------
-GBR:                                 | 0.05116 | 0.37906 | 0.11818 |
-optimized GBR:                       | 0.04911 | 0.01755 | 0.12613 |
-clusterization + opt GBR:            | 0.03029 | 0.05462 | 0.13616 |
-clusterization-y1 + opt GBR:         | 0.03752 | 0.15997 | 0.12727 |
-clusterization-y1 + opt GBR + Ridge: | 0.04016 | 0.16047 | 0.12763 |
+dataset2 MAPE train                              | y1      | y2      | y3      |
+--------------------------------------------------------------------------------
+GBR:                                             | 0.05116 | 0.37906 | 0.11818 |
+optimized GBR:                                   | 0.04911 | 0.01755 | 0.12613 |
+clusterization + opt GBR:                        | 0.03029 | 0.05462 | 0.13616 |
+clusterization-y1 + opt GBR:                     | 0.03752 | 0.15997 | 0.12727 |
+clusterization-y1 + opt GBR + Ridge:             | 0.04016 | 0.16047 | 0.12763 |
+
+
+Note: dataset1 & dataset2 are slightly different
+      dataset3 is dataset2 without some columns
+
+dataset3 r^2 test                                | y1      | y2      | y3      |
+--------------------------------------------------------------------------------
+GBR:                                             |         |         |         |
+clusterization(silhouette coef) + GBR:           |         |         |         |
+clusterization-y(silhouette coef)+ GBR:          | 0.85306 | 0.80494 | 0.75211 |
+clusterization-y(silhouette coef)+ GBR + Ridge:  | 0.84310 | 0.80072 | 0.71281 |
+
+dataset3 r^2 train                               | y1      | y2      | y3      |
+--------------------------------------------------------------------------------
+GBR:                                             |         |         |         |
+clusterization(silhouette coef) + GBR:           |         |         |         |
+clusterization-y(silhouette coef)+ GBR:          | 0.94613 | 0.99853 | 0.92450 |
+clusterization-y(silhouette coef)+ GBR + Ridge:  | 0.92709 | 0.99709 | 0.85587 |
+
+dataset3 r^2 validate                            | y1      | y2      | y3      |
+--------------------------------------------------------------------------------
+GBR:                                             |         |         |         |
+clusterization(silhouette coef) + GBR:           |         |         |         |
+clusterization-y(silhouette coef)+ GBR:          | 0.83399 | 0.84943 | 0.70777 |
+clusterization-y(silhouette coef)+ GBR + Ridge:  | 0.85237 | 0.84985 | 0.72000 |
