@@ -67,7 +67,7 @@ clusterization-y1 + opt GBR + Ridge:             | 0.04016 | 0.16047 | 0.12763 |
 Note: dataset1 & dataset2 are slightly different
       dataset3 is dataset2 without some columns
 
-dataset3 r^2 test                                | y1      | y2      | y3      |
+dataset3 r^2 dev                                 | y1      | y2      | y3      |
 --------------------------------------------------------------------------------
 GBR:                                             |         |         |         |
 clusterization(silhouette coef) + GBR:           |         |         |         |
@@ -81,9 +81,16 @@ clusterization(silhouette coef) + GBR:           |         |         |         |
 clusterization-y(silhouette coef)+ GBR:          | 0.94613 | 0.99853 | 0.92450 |
 clusterization-y(silhouette coef)+ GBR + Ridge:  | 0.92709 | 0.99709 | 0.85587 |
 
-dataset3 r^2 validate                            | y1      | y2      | y3      |
+
+dataset3 r^2 test                                | y1      | y2      | y3      |
 --------------------------------------------------------------------------------
 GBR:                                             |         |         |         |
 clusterization(silhouette coef) + GBR:           |         |         |         |
 clusterization-y(silhouette coef)+ GBR:          | 0.83399 | 0.84943 | 0.70777 |
 clusterization-y(silhouette coef)+ GBR + Ridge:  | 0.85237 | 0.84985 | 0.72000 |
+
+optimization of hyper-parameters:
+ - number of clusters
+ - GBR hyper-parameters
+ - Ridge hyper-parameters
+
